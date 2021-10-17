@@ -1,0 +1,44 @@
+{
+	"name": "@socketdb/plugin-validate",
+	"version": "1.0.0",
+	"description": "Schema validation plugin for SocketDB",
+	"source": "src/index.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.module.js",
+	"umd:main": "dist/index.umd.js",
+	"repository": "git@github.com:SocketDB/plugin-validate.git",
+	"author": "Timo Bechtel",
+	"license": "MIT",
+	"keywords": [
+		"socketdb",
+		"plugin",
+		"schema",
+		"validation"
+	],
+	"scripts": {
+		"prepack": "npm run build",
+		"build": "microbundle --no-sourcemap",
+		"dev": "microbundle watch --no-sourcemap",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.0",
+		"@semantic-release/git": "^10.0.0",
+		"@types/jest": "^27.0.2",
+		"jest": "^27.3.0",
+		"microbundle": "^0.14.1",
+		"semantic-release": "^18.0.0",
+		"ts-jest": "^27.0.7",
+		"typescript": "^4.4.4"
+	},
+	"files": [
+		"dist",
+		"package.json"
+	],
+	"peerDependencies": {
+		"socketdb": "~3.8.1"
+	},
+	"dependencies": {
+		"ajv": "^8.6.3"
+	}
+}
